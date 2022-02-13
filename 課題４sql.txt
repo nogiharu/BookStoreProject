@@ -1,0 +1,38 @@
+
+CREATE TABLE author
+(
+   author_id int(5) not null auto_increment,
+   author_name varchar(100) not null,
+   primary key(author_id)
+);
+
+CREATE TABLE product
+(
+   product_id int(2) not null auto_increment primary key,
+   product_name varchar(100) not null,
+   publication_year int(4) not null,
+   price int(5) not null,
+   author_id int(5) not null
+);
+
+INSERT INTO author (author_name) VALUES('芥川龍之介');
+INSERT INTO author (author_name) VALUES('夏目漱石');
+INSERT INTO author (author_name) VALUES('江戸川乱歩');
+
+
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('アグニの神',1921,300,1);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('蜘蛛の糸',1918,280,1);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('トロッコ',1922,300,1);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('蜜柑',1919,290,1);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('羅生門',1915,300,1);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('吾輩は猫である',1904,300,2);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('坊ちゃん',1906,280,2);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('三四郎',1908,280,2);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('それから',1909,290,2);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('門',1910,300,2);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('怪人二十面相',1936,300,3);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('少年探偵団',1937,290,3);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('透明怪人',1951,280,3);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('地獄の道化師',1939,280,3);
+INSERT INTO product (product_name,publication_year,price,author_id) VALUES('二銭銅貨',1923,300,3);
+
